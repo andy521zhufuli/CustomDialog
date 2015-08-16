@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <!-- 透明-->
+    <color name="trans">#00000000</color>
+    <!-- 对话框分割线-->
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="alertdialot_text_blue">#037BFF</color>
+</resources>
