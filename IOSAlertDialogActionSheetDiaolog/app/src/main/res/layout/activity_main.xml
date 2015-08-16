@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog 1"
+        android:id="@+id/alertdialog_with_one_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog 2"
+        android:id="@+id/alertdialog_with_two_button"
+        android:layout_below="@+id/alertdialog_with_one_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Action SheetMessaage Like QQ"
+        android:id="@+id/actionsheetdialog_message"
+        android:layout_below="@+id/alertdialog_with_two_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Action sheet chose pic"
+        android:id="@+id/actionsheet_choose_pic"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/actionsheetdialog_message"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="action sheeet list"
+        android:id="@+id/actionsheet_dialog_list"
+        android:layout_below="@+id/actionsheet_choose_pic"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+</RelativeLayout>
