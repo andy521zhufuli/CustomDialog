@@ -66,8 +66,8 @@ public class AlertDialog
         alertdialog_line_between_pos_neg_imageview.setVisibility(View.GONE);
 
         //定义Dialog布局  参数
-        dialog = new Dialog(context, R.style.AlertDialogStyle);
-
+        dialog = new Dialog(context, R.style.AlertDialogStyle1);
+        dialog.setContentView(view);
         //Dialog背景大小 宽度略小于屏幕
         lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int)(display.getWidth() * 0.85), FrameLayout.LayoutParams.WRAP_CONTENT));
         return this;
@@ -102,11 +102,11 @@ public class AlertDialog
         showMsg = true;
         if ("".equals(msg))
         {
-            alertdialog_title_textview.setText("内容");
+            alertdialog_msg_textview.setText("内容");
         }
         else
         {
-            alertdialog_title_textview.setText(msg);
+            alertdialog_msg_textview.setText(msg);
         }
         return this;
     }
