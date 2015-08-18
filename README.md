@@ -90,4 +90,6 @@
 只需要在Dialog里面设置就行了, 这个算是比较重要的,其他如AlertDialog的自定义view类,参考代码就行了  很容易懂
 
 ###更改购物车商品数量弹出对话框
+添加了一个项目中遇到的东西
+就是购物车更改数量, 弹出一个Dialog
 ![Show](http://ww1.sinaimg.cn/large/9750cbe5gw1ev784t9b8hg20cm0ey40i.gif)
