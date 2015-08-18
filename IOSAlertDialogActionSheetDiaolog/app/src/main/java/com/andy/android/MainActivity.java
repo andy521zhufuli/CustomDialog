@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.andy.android.view.AlertDialog;
+import com.andy.android.view.AlertDialogModifyNum;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
@@ -20,7 +21,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private Button actionsheetdialog_message;       //ActionSheetDialog 只显示一个Message
     private Button actionsheet_choose_pic;          //ActionSheetDialog 选择图片
     private Button actionsheet_dialog_list;         //ActionSheetDialog 一个列表
-
+    private Button actionsheet_dialog_shoppingcar;//购物车加减商品数量
     private Context mContext;
 
 
@@ -44,6 +45,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         actionsheetdialog_message = (Button) findViewById(R.id.actionsheetdialog_message);
         actionsheet_choose_pic = (Button) findViewById(R.id.actionsheet_choose_pic);
         actionsheet_dialog_list = (Button) findViewById(R.id.actionsheet_dialog_list);
+        actionsheet_dialog_shoppingcar = (Button) findViewById(R.id.actionsheet_dialog_shoppingcar);
 
         //设置监听器
         alertdialog_with_one_button.setOnClickListener(this);
@@ -51,6 +53,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         actionsheetdialog_message.setOnClickListener(this);
         actionsheet_choose_pic.setOnClickListener(this);
         actionsheet_dialog_list.setOnClickListener(this);
+        actionsheet_dialog_shoppingcar.setOnClickListener(this);
     }
 
 
@@ -75,7 +78,29 @@ public class MainActivity extends Activity implements View.OnClickListener{
             //一个列表
             case R.id.actionsheet_dialog_list:
                 break;
+            case R.id.actionsheet_dialog_shoppingcar:
+                shoppingcarGoodsNum();
+                break;
         }
+    }
+
+    private void shoppingcarGoodsNum() {
+        new AlertDialogModifyNum(mContext, "10")
+                .builder()
+                .setConformButton("确定", new AlertDialogModifyNum.OnClickListener() {
+                    @Override
+                    public void onClick(View view, String goodnum) {
+                        Toast.makeText(mContext, "Plus", Toast.LENGTH_LONG).show();
+                    }
+                })
+                .setCancelable(false)
+                .setCancelButton("取消", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(mContext, "Cancel", Toast.LENGTH_LONG).show();
+                    }
+                })
+                .show();
     }
 
     private void twoButton() {
