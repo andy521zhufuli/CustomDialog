@@ -1,4 +1,4 @@
-# CustomDialog
+# CustomDialog 自定义对话框
 ## 整体效果如下
 ![Show](http://ww1.sinaimg.cn/large/9750cbe5gw1ev49kkdm0cg20cm0eywhj.gif)
 
