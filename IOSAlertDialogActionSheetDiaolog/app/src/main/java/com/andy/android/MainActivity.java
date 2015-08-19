@@ -11,6 +11,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.andy.android.view.ActionSheetDialog;
 import com.andy.android.view.AlertDialog;
 import com.andy.android.view.AlertDialogModifyNum;
 
@@ -71,12 +72,15 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             //消息
             case R.id.actionsheetdialog_message:
+                actionsheet_message();
                 break;
             //选择图片
             case R.id.actionsheet_choose_pic:
+                actionsheetChoosePic();
                 break;
             //一个列表
             case R.id.actionsheet_dialog_list:
+                actionsheetList();
                 break;
             case R.id.actionsheet_dialog_shoppingcar:
                 shoppingcarGoodsNum();
@@ -84,6 +88,158 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
     }
 
+    /**
+     * 弹出一个list可供选择
+     */
+    private void actionsheetList() {
+        new ActionSheetDialog(MainActivity.this)
+                .builder()
+                .setTitle("请选择操作")
+                .setCancelable(false)
+                .setCanceledOnTouchOutside(false)
+                .addSheetItem("条目一", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目二", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目三", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目四", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目五", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目六", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目七", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目八", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目九", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("条目十", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        }).show();
+    }
+
+    /**
+     * 弹出选择图片 拍照还是从图库中选择
+     */
+    private void actionsheetChoosePic() {
+        new ActionSheetDialog(MainActivity.this)
+                .builder()
+                .setTitle("请选择操作")
+                .setCancelable(false)
+                .setCanceledOnTouchOutside(false)
+                .addSheetItem("从相册选取", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .addSheetItem("拍照", ActionSheetDialog.SheetItemColor.Blue,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+                                Toast.makeText(MainActivity.this,
+                                        "item" + which, Toast.LENGTH_SHORT)
+                                        .show();
+                            }
+                        })
+                .show();
+    }
+
+    /**
+     * 弹出提示
+     */
+    private void actionsheet_message() {
+        new ActionSheetDialog(MainActivity.this)
+                .builder()
+                .setTitle("清空消息列表后，聊天记录依然保留，确定要清空消息列表？")
+                .setCancelable(false)
+                .setCanceledOnTouchOutside(false)
+                .addSheetItem("清空消息列表", ActionSheetDialog.SheetItemColor.Red,
+                        new ActionSheetDialog.OnSheetItemClickListener() {
+                            @Override
+                            public void onClick(int which) {
+
+                            }
+                        }).show();
+    }
+
+    /**
+     * 修改购物车数量弹出的Dialog
+     */
     private void shoppingcarGoodsNum() {
         new AlertDialogModifyNum(mContext, "10")
                 .builder()
@@ -103,6 +259,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 .show();
     }
 
+    /**
+     * 两个按钮的  dialog 确定取消
+     */
     private void twoButton() {
         new AlertDialog(mContext).builder()
                 .setTitle("").setMsg("确定退出吗?").setCancelable(false)
@@ -120,6 +279,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 .show();
     }
 
+    /**
+     * 一个按钮  取消 或者确定
+     */
     private void oneButton() {
         new AlertDialog(mContext).builder()
                 .show();
