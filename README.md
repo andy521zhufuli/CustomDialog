@@ -95,4 +95,5 @@
 ![Show](http://ww1.sinaimg.cn/large/9750cbe5gw1ev784t9b8hg20cm0ey40i.gif)
 ### 添加ActionSheetDialog
 因为用模拟器, 图比较大,而且actionsheetlist变形了, 在真机上不会
+
 ![Show](http://ww2.sinaimg.cn/large/9750cbe5gw1ev7mge24mag20cm0mmk69.gif)
